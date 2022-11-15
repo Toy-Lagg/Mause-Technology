@@ -47,3 +47,21 @@ a {
     font-size: 45px;
     color: black;
 }
+
+#title {
+text-align: center;
+font-size: 95px;
+    font-family: sans-serif;
+}
+
+
+#titledesc {
+ text-align: center;
+    font-size: 90;
+    font-family: sans-serif;
+}
+
+
+#space {
+ padding: 20px;   
+}
