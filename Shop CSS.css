@@ -1,8 +1,8 @@
 #border {
     border: 10px solid black;
     border-color: black;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 h2 {
@@ -54,8 +54,8 @@ a {
 text-align: center;
 font-size: 95px;
     font-family: sans-serif;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
@@ -63,8 +63,8 @@ font-size: 95px;
  text-align: center;
     font-size: 70px;
     font-family: sans-serif;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 
