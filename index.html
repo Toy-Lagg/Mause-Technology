@@ -222,7 +222,7 @@
             <li> Corsair iCUE 4000X White Case </li>
         </ul>
         
-         <h2 id="price"> Price: $1,703.99 </h2>
+         <h2 id="price"> Price: $1703.99 </h2>
             
    
             
@@ -246,7 +246,7 @@
             <li> 	Phanteks Eclipse G360A White </li>
         </ul>
         
-         <h2 id="price"> Price: $2,734.99 </h2>
+         <h2 id="price"> Price: $2734.99 </h2>
             
    
             
@@ -269,7 +269,7 @@
             <li> 	Asus ROG STRIX Helios Gundam Edition </li>
         </ul>
         
-         <h2 id="price"> Price: $2,849.99 </h2>
+         <h2 id="price"> Price: $2849.99 </h2>
             
    
             
@@ -292,7 +292,7 @@
             <li> 	Phanteks Eclipse G360A Black </li>
         </ul>
         
-         <h2 id="price"> Price: $5,499.99 </h2>
+         <h2 id="price"> Price: $5499.99 </h2>
             
    
             
@@ -314,7 +314,7 @@
             <li> 		Thermaltake Level 20 </li>
         </ul>
         
-         <h2 id="price"> Price: $6,544.99 </h2>
+         <h2 id="price"> Price: $6544.99 </h2>
             
    
             
@@ -331,8 +331,8 @@
       <div style="text-align: center;">
         <div style="margin-bottom: 1.25rem;">
           <p></p>
-          <select id="item-options"><option value="1M1D PC Build" price="549.99">1M1D PC Build - 549.99 USD</option><option value="Cubster PC Build" price="759.99">Cubster PC Build - 759.99 USD</option><option value="Mause OG PC Build" price="1074.99">Mause OG PC Build - 1074.99 USD</option><option value="Holiday PC Build" price="2124.99">Holiday PC Build - 2124.99 USD</option><option value="Black Hole PC Build" price="2999.99">Black Hole PC Build - 2999.99 USD</option><option value="Snowstorm PC Build" price="3099.99">Snowstorm PC Build - 3099.99 USD</option><option value="Obsidian PC Build" price="3699.99">Obsidian PC Build - 3699.99 USD</option><option value="Horizon Bronze PC Build" price="942.99">Horizon Bronze PC Build - 942.99 USD</option><option value="Horizon Silver PC Build" price="1703.99">Horizon Silver PC Build - 1703.99 USD</option><option value="Horizon Gold PC Build" price="2734.99">Horizon Gold PC Build - 2734.99 USD</option><option value="Horizon Galaxite PC Build" price="2849.99">Horizon Galaxite PC Build - 2849.99 USD</option><option value="Horizon Aurora PC Build" price="5499.99">Horizon Aurora PC Build - 5499.99 USD</option><option value="Horizon Antimatter PC Build" price="6544.99">Horizon Antimatter PC Build - 6544.99 USD</option></select>
-          <select style="visibility: hidden" id="quantitySelect"></select>
+          <select id="item-options"><option value="1M1D PC Build" price="549.99">1M1D PC Build - 549.99 USD</option><option value="Cubster PC Build" price="759.99">Cubster PC Build - 759.99 USD</option><option value="Mause OG PC Build" price="1074.99">Mause OG PC Build - 1074.99 USD</option><option value="Holiday PC Build" price="2124.99">Holiday PC Build - 2124.99 USD</option><option value="Black Hole PC Build" price="2999.99">Black Hole PC Build - 2999.99 USD</option><option value="Snowstorm PC Build" price="3099.99">Snowstorm PC Build - 3099.99 USD</option><option value="Obsidian PC Build" price="3699.99">Obsidian PC Build - 3699.99 USD</option><option value="Horizon Bronze PC Build" price="942.99">Horizon Bronze PC Build - 942.99 USD</option><option value="Horizon Silver PC Build" price="1703.99">Horizon Silver PC Build - 1073.99 USD</option><option value="Horizon Gold PC Build" price="2734.99">Horizon Gold PC Build - 2734.99 USD</option><option value="Horizon Galaxite PC Build" price="2849.99">Horizon Galaxite PC Build - 2849.99 USD</option><option value="Horizon Aurora PC Build" price="5499.99">Horizon Aurora PC Build - 5499.99 USD</option><option value="Horizon Antimatter PC Build" price="6544.99">Horizon Antimatter PC Build - 6544.99 USD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
         </div>
       <div id="paypal-button-container"></div>
       </div>
@@ -340,9 +340,9 @@
     <script src="https://www.paypal.com/sdk/js?client-id=AeMGoTAA9Qk2tfqmFchgWN_JrgUhdLnlO9fBHwPZrIBw3Lxwfpm54uy7H2NKtcGA7B2igPUwM9vcHxjM&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
     <script>
       function initPayPalButton() {
-        var shipping = 12;
+        var shipping = 10;
         var itemOptions = document.querySelector("#smart-button-container #item-options");
-    var quantity = parseInt();
+    var quantity = parseInt(10);
     var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
     if (!isNaN(quantity)) {
       quantitySelect.style.visibility = "visible";
@@ -355,14 +355,14 @@
       style: {
         shape: 'rect',
         color: 'gold',
-        layout: 'vertical',
+        layout: 'horizontal',
         label: 'paypal',
         
       },
       createOrder: function(data, actions) {
         var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
         var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
-        var tax = (10 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(10)/100));
+        var tax = (7 === 0 || false) ? 0 : (selectedItemPrice * (parseFloat(7)/100));
         if(quantitySelect.options.length > 0) {
           quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
         } else {
@@ -429,10 +429,14 @@
   }
   initPayPalButton();
     </script>
+    
+ </div>
  
  
     
       </body>
     </html>
+    
+    
     
     
